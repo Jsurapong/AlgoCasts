@@ -15,8 +15,10 @@ function reverseInt(n) {
     .reverse()
     .join("");
     
-
-  return parseInt(reversed) * Math.sign(n);
+ //Math.sign get positive 1,  negative -1
+ // 100 * -1 = -100
+ // 100 * 1 = 100;
+  return parseInt(reversed) * Math.sign(n); 
 }
 
 module.exports = reverseInt;
