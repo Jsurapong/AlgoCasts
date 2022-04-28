@@ -23,8 +23,21 @@
 //     .join("");
 // }
 
+// function reverse(str) {
+//   return str.split("").reduce((rev, char) => `${char}${rev}`, "");
+// }
+
 function reverse(str) {
-  return str.split("").reduce((rev, char) => `${char}${rev}`, "");
+  const strArr = str.split("");
+
+  let reversed = "";
+
+  while (strArr.length > 0) {
+    // reversed =  reversed+strArr.pop() ;
+    reversed = strArr.shift() + reversed;
+  }
+
+  return reversed;
 }
 
 module.exports = reverse;

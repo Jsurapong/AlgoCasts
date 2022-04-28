@@ -13,9 +13,57 @@
 //   return reversed === str;
 // }
 
+
+
+
+function palindromeEx(str) {
+  // ['a','b','b','a']
+  // ['a','b','b','a']
+
+
+  
+  // every check all true 
+  return str.split("").every((char, i) => {
+
+    const indexLast  =str.length - i - 1;
+    const stringLast = str[indexLast];
+    // s1
+    // i = 0;
+    // char = a
+    // indexLast = 3
+    // stringLast = a;
+    // return true
+
+
+    // s2
+    // i = 1;
+    // char = b
+    // indexLast = 2
+    // stringLast = b;
+    // return true
+
+    // s3
+    // i = 2;
+    // char = b
+    // indexLast = 1
+    // stringLast = b;
+    // return true
+
+    // s4
+    // i = 3;
+    // char = a
+    // indexLast = 0
+    // stringLast = a;
+    // return true
+
+    return char === stringLast;
+  });
+}
+
 function palindrome(str) {
   return str.split("").every((char, i) => {
     return char === str[str.length - i - 1];
   });
 }
+
 module.exports = palindrome;
